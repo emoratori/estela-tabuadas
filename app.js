@@ -20,17 +20,17 @@ let P = null, G = null, S = null, cur = null, NEW = [], RANGE = 7, GATE = 0, fro
 const saveCfg = () => LS.set('et_cfg', cfg);
 const save = () => LS.set(pkey(P.name), P);
 
-/* ===== Mascotes ===== */
+/* ===== Mascotes (Valores dobrados para maior desafio) ===== */
 const MASCOTS = [
   { e: '🥚', n: 'Ovinho', pts: 0, days: 0 },
-  { e: '🐣', n: 'Pintinho', pts: 100, days: 2 },
-  { e: '🐶', n: 'Totó', pts: 300, days: 3 },
-  { e: '🐱', n: 'Mimi', pts: 700, days: 5 },
-  { e: '🦊', n: 'Raposa', pts: 1200, days: 7 },
-  { e: '🐼', n: 'Panda', pts: 2000, days: 10 },
-  { e: '🦄', n: 'Unicórnio', pts: 3000, days: 14 },
-  { e: '🐲', n: 'Dragão', pts: 4500, days: 21 },
-  { e: '🤖', n: 'Robô', pts: 6500, days: 30 }
+  { e: '🐣', n: 'Pintinho', pts: 200, days: 4 },     // Antes: 100 pts, 2 dias
+  { e: '🐶', n: 'Totó', pts: 600, days: 6 },        // Antes: 300 pts, 3 dias
+  { e: '🐱', n: 'Mimi', pts: 1400, days: 10 },      // Antes: 700 pts, 5 dias
+  { e: '🦊', n: 'Raposa', pts: 2400, days: 14 },    // Antes: 1200 pts, 7 dias
+  { e: '🐼', n: 'Panda', pts: 4000, days: 20 },     // Antes: 2000 pts, 10 dias
+  { e: '🦄', n: 'Unicórnio', pts: 6000, days: 28 }, // Antes: 3000 pts, 14 dias
+  { e: '🐲', n: 'Dragão', pts: 9000, days: 42 },    // Antes: 4500 pts, 21 dias
+  { e: '🤖', n: 'Robô', pts: 13000, days: 60 }      // Antes: 6500 pts, 30 dias
 ];
 const unlocked = m => m.pts === 0 || P.points >= m.pts || P.best >= m.days;
 function checkUnlocks() {
